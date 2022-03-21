@@ -12,7 +12,10 @@ for restaurant in restaurant_file:
 
     name, rating = restaurant_rating
     restaurants_data[name] = restaurants_data.get(name,rating)
-print(restaurants_data)   
+print(restaurants_data) 
+
+for restaurant in restaurants_data:
+    sorted(restaurants_data.items())
 
 
     
