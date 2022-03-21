@@ -8,7 +8,10 @@ restaurant_file = open(sys.argv[1])
 restaurants_data = {}
 for restaurant in restaurant_file:
     restaurant_rating = restaurant.split(":")
-    restaurants_data[restaurant_rating[0]] = restaurants_data[1]
+    print(restaurant_rating)
+
+    name, rating = restaurant_rating
+    restaurants_data[name] = restaurants_data.get(name,rating)
 print(restaurants_data)   
 
 
